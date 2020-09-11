@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+{%load static%}
+
+  </head>
+
+<body>
+<!-- NAVIGATION BAR-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <!-- a class="navbar-brand" href="#">TextUtils.in</a -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item active"><a class="nav-link" href=" /"><span
+                    class="fa fa-home fa-sm"></span>Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="/about"><span
+                    class="fa fa-info fa-sm"></span> About</a></li>
+        <li class="nav-item"><a class="nav-link" href="/contact"><span
+                    class="fa fa-address-card fa-sm"></span> Contacts</a></li>
+        <li class="nav-item"><a class="nav-link" href="/login"><span
+                    class="fa fa-sign-in fa-sm"></span>SignIn</a></li>
+        <li class="nav-item"><a class="nav-link" href="/logout"><span
+                    class="fa fa-user-plus fa-sm"></span>SignUp</a></li>
+        <li class="nav-item active"><a class="nav-link" href="/tutorial"><span
+                    class="fa fa-home fa-sm"></span>Tutorial</a></li>
+    </ul>
+  </div>
+</nav>
+<h1>hellooooo</h1>
+<!--end of navigation bar-->
+<div class="alert alert-dark alert-dismissible fade show" role="alert">
+  <strong>Welcome To Att_portal</strong> <br>
+  You can do anything with your Attendance.
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+  <script src="{% static 'js/login_boot.js'%}"></script>
+
+</body>
+</html>
