@@ -16,25 +16,25 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path,include
-from account import views
+
 from django.conf.urls.static import static
 from django.conf import settings
 from django.contrib.auth import views as auth_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('account.urls')),
-    path('/account/',include('account.urls')),
-    path('/login/',include('account.urls')),
-    path('/register/', include('account.urls')),
-    path('/logout/', include('account.urls')),
-    path('/contact/',include('account.urls')),
-    path('about/', include('account.urls')),
-    path('tymtable/', include('account.urls')),
-    path('tutorial/', include('account.urls')),
-    path('delete/<int:id', include('account.urls')),
-    #path('/edit', include('account.urls')),
-    path('update/<int:id$', include('account.urls',namespace='account')),
+    path('', include('account.urls',namespace='account')),
+    #path('/account/',include('account.urls')),
+    #path('/login/',include('account.urls')),
+    #path('/register/', include('account.urls')),
+    #path('/logout/', include('account.urls')),
+    #path('/contact/',include('account.urls')),
+    #path('about/', include('account.urls')),
+    #path('tymtable/', include('account.urls')),
+    #path('tutorial/', include('account.urls')),
+    #path('delete/', include('account.urls')),
+    #path('tutorial', include('account.urls')),
+    #path('^update/', include('account.urls')),
     path('account/',include('django.contrib.auth.urls')),
     path('accounts/login/',auth_view.LoginView.as_view(template_name='account/login.html'))
 ]

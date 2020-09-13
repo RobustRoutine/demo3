@@ -38,7 +38,7 @@
                                     <th>4:15 - 5:00</th><th>   </th><th>      </th>
                                 </tr>
 
-                                {% for i in teacher %}
+                                {% for i in all_teacher %}
 
 
                                 <tr>
@@ -66,8 +66,8 @@
                                     <th> {{i.sixth_link}}     </th><th>   </th>
                                     <th> {{i.sev_link}}       </th><th>   </th>
                                     <th>
-                                        <td><a class="nav-link" href="#">Update</a></td>
-                                        <td><a class="btn btn-sm btn-danger" href="#">Delete</a> </td>
+                                        <td><a class="nav-link" href="{% url 'account:update' pk=i.id %}">Update</a></td>
+                                        <td><a class="btn btn-sm btn-danger" href="{% url 'account:delete' pk=i.id %}">Delete</a> </td>
                                     </th>
                                 </tr>
                                 <tr> </tr>
