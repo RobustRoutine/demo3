@@ -118,17 +118,17 @@ def logout(request):
 #    return render(request, 'account/tymtable.html', {'teacher': teacher})
 
 @login_required
-def delete(request,pk):
-    id=pk
-    teacher_timetable.objects.filter(id=id).delete()
+def delete(request,id):
+    pk=id
+    teacher_timetable.objects.filter(id=pk).delete()
 
-    return redirect('/tymtable/')
+    return HttpResponse("your data get deleted .you can go back and check your tymtable")
 
 @login_required()
-def update(request,pk):
+def update(request,id):
     print('h1')
-    id=pk
-    teacher=teacher_timetable.objects.get(id=id)
+    pk=id
+    teacher=teacher_timetable.objects.get(id=pk)
     print('h2')
     form=teacher_timetableform(instance=teacher)
     print('h3')
@@ -136,7 +136,7 @@ def update(request,pk):
         form=teacher_timetableform(request.POST,instance=teacher)
         if form.is_valid:
             form.save()
-        return redirect('/tymtable/')
+        return HttpResponse("your data get updated .you can go back and check your tymtable")
     else:
         context={'form':form}
         print('h4')

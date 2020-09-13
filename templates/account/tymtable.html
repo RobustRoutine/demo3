@@ -66,8 +66,8 @@
                                     <th> {{i.sixth_link}}     </th><th>   </th>
                                     <th> {{i.sev_link}}       </th><th>   </th>
                                     <th>
-                                        <td><a class="nav-link" href="{% url 'account:update' pk=i.id %}">Update</a></td>
-                                        <td><a class="btn btn-sm btn-danger" href="{% url 'account:delete' pk=i.id %}">Delete</a> </td>
+                                        <td><a class="nav-link" href="{%url 'account:update' id=i.id%}">Update</a></td>
+                                        <td><a class="btn btn-sm btn-danger" href="{%url 'account:delete' id=i.id %}">Delete</a> </td>
                                     </th>
                                 </tr>
                                 <tr> </tr>
